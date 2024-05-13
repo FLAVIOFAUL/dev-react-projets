@@ -114,4 +114,36 @@ opacity: 0.5;
 `;
 
 export const User = styled.li `
+
+display:flex;
+justify-content: space-around;
+align-items: center;
+background: #FFFFFF40;
+width: 342px;
+height: 58px;
+border-radius: 14px 14px 14px 14px;
+box-shadow: 0px 4px 4px 0px #00000040;
+border: none;
+outline: none;
+margin-top: 20px;
+p{
+
+font-weight: normal;
+font-style:normal;
+font-size: 20px;
+font-weight: 400;
+line-height: 28.13px;
+ color: #FFFFFF;
+
+}
+
+button {
+background: none;
+border: none;
+cursor: pointer;
+
+
+
+
+}
 `;
