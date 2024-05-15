@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import Axios from "axios";
 import People from "./assest/people.svg";
@@ -14,6 +14,7 @@ import {
   Button,
   User,
 } from "./styles";
+import axios from "axios";
 
 
 function App() {
@@ -30,18 +31,25 @@ function App() {
    } );
     setUsers([ ...users, newUser ]),
         
-       
-        console.log(data)
+  
+  useEffect (() => {
+     async function fetchUsers(){
+    const {data: newUsers} = await axios.get("http://localhost:3001/users");
 
+    setUsers(newUsers);
+     }
 
-  }
-
+     fetchUsers()
+  },[])
+  
   function deleteUser(userId){
+    await axios.delet("http://localhost:3001/users/${userId}")
   const newUsers =
    users.filter
   ( user => userId !== userId)
   setUsers (newUsers);
   }
+}
   return (
     <Container>
       <Image alt="logo-imagem" src={People} />
