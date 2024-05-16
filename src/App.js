@@ -42,8 +42,8 @@ function App() {
      fetchUsers()
   },[])
   
-  function deleteUser(userId){
-    await axios.delet("http://localhost:3001/users/${userId}")
+  async function deleteUser(userId){
+    await axios.delete("http://localhost:3001/users/${userId}")
   const newUsers =
    users.filter
   ( user => userId !== userId)
