@@ -1,5 +1,5 @@
 import React, { useState, useRef,  } from "react";
-import { useHistory } from  "react-router-dom"
+import { useHistory } from  "react-router-dom";
 import Axios from "axios";
 import People from "../../assest/people.svg";
 import Arrow from "../../assest/arrow.svg";
@@ -26,13 +26,16 @@ function App() {
 
   async function addNewUser() {
 
-  const {data: newUser } = await axios.post("http://localhost:3001/users",{
+  const {data: newUser } = await axios.post("http://localhost:3001/users");
+  {
   name:inputName.current.value, 
   age: inputAge.current.value,
-   } );
+  
     setUsers([ ...users, newUser ]),
-        
+  
     history.push("/usuarios");
+
+};
   retorn (
     <Container>
       <Image alt="logo-imagem" src={People} />
