@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Background from "./assest/backgraund1.svg";
+import Background from "../../assest/backgraund2.svg";
 
 export const Container = styled.div`
   background: url("${Background}");
@@ -8,7 +8,8 @@ export const Container = styled.div`
   flex-direction: COLUMN;
   align-items: center;
   gap: 40px;
-  
+  height:100px;
+  min-height: 100vh;
 `;
 
 export const Image = styled.img`
@@ -26,9 +27,12 @@ export const ContainerItens = styled.div`
   );
 
     border-radius: 61px 61px 0px 0px ;
+    backdrop-filter: blur(45px);
     padding: 50px 36px ; 
     display: FLEX;
     flex-direction: COLUMN;
+    height:100%;
+    min-height: calc( 100vh - 170px);
 `;
 
 export const H1 = styled.h1`
@@ -44,52 +48,16 @@ export const H1 = styled.h1`
 
 `;
 
-export const InputLabel = styled.p`
 
-
-font-size: 18px;
-font-weight: bold;
-line-height: 22px;
-font-style: normal;
-letter-spacing: -0.408px;
-
-color: #EEEEEE;
-
-
-
-`;
-
-export const Input = styled.input`
-
-width: 342px;
-height: 58px;
-border: none;
-outline: none;
-top: 193px;
-padding-left: 25px;
-margin-bottom: 25px;
-box-shadow: 0px 4px 4px 0px #00000040;
-gap: 0px;
-border-radius: 14px 14px 14px 14px;
-
-background: #FFFFFF40;
-
-font-size: 20px;
-font-weight: 400;
-line-height: 28.13px;
-text-align: left;
-
-
-`;
 
 export const Button = styled.button`
 
 width: 342px;
 height: 74px;
-border:none;
+border:1px solid #FFFFFF;
 border-radius: 14px 14px 14px 14px;
-background: #000000CC;
-
+background: transparent;
+margin-top: 130px;
 
 font-size: 17px;
 font-weight: bold;
@@ -102,7 +70,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 20px;
-
 &:hover{
 
 opacity: 0.8;
@@ -111,39 +78,8 @@ opacity: 0.8;
 &:active{
 opacity: 0.5;
 }
-`;
-
-export const User = styled.li `
-
-display:flex;
-justify-content: space-around;
-align-items: center;
-background: #FFFFFF40;
-width: 342px;
-height: 58px;
-border-radius: 14px 14px 14px 14px;
-box-shadow: 0px 4px 4px 0px #00000040;
-border: none;
-outline: none;
-margin-top: 20px;
-p{
-
-font-weight: normal;
-font-style:normal;
-font-size: 20px;
-font-weight: 400;
-line-height: 28.13px;
- color: #FFFFFF;
-
-}
-
-button {
-background: none;
-border: none;
-cursor: pointer;
-
-
-
-
+img {
+transform: rotateY(180deg)
 }
 `;
+
