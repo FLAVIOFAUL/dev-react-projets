@@ -1,20 +1,20 @@
 import React from "react"
-import { BrowserRouter as Router,Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router,Routes, Route} from "react-router-dom";
 import Home from "./conteiners/Home"
 import Users from "./conteiners/Users"
 
-function Router(){
+function MyRouter(){
 
     return(
     <Router>
-        <switch>
-         <Route exact path="/" Component={Home}/>
-         <Route exact path="/usuarios" Component={Users} />
-         </switch>
+        <Routes>
+         <Route  path="/" element={<Home />}/>
+         <Route  path="/usuarios" elementent={<Users />} />
+         </Routes>
     </Router>
 
     )
 
 }
 
-export default Router
+export default MyRouter;

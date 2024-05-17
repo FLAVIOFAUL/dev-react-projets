@@ -1,17 +1,17 @@
 import React, { useState, useRef,  } from "react";
-import { useHistory } from  "react-router-dom";
+import { useNavigate } from  "react-router-dom";
 import Axios from "axios";
 import People from "../../assest/people.svg";
 import Arrow from "../../assest/arrow.svg";
-
+import H1 from "../../components/Titles";
+import ContainerItens from "../../components/conteiners";
+import Button from "../../components/button";
 import {
   Container,
   Image,
-  H1,
-  ContainerItens,
   Input,
   InputLabel,
-  Button,
+
   
 } from "./styles";
 import axios from "axios";
@@ -19,7 +19,7 @@ import axios from "axios";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const history = useHistory()
+  const navigate = useNavigate()
   const inputName = useRef()
   const inputAge = useRef()
 
@@ -33,7 +33,7 @@ function App() {
   });
     setUsers([ ...users, newUser ]);
   
-    history.push("/usuarios");
+    navigate("/usuarios");
 }
 
   retorn (
