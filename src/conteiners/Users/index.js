@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
 import Axios from "axios";
-import Avatar from "./assest/avatar.svg";
-import Arrow from "./assest/arrow.svg";
-import Trash from "./assest/trash.svg";
-import  H1  from "../../Titles/styles";
+import Avatar from "../../assest/avatar.svg";
+import Arrow from "../../assest/arrow.svg";
+import Trash from "../../assest/trash.svg";
+
+import  Title  from "../../components/Titles";
 import ContainerItens from "../../components/conteiners";
 import Button from "../../components/button";
 import {
   Container,
   Image,
-  User,
-} from "./styles";
+  User
+} 
+
+from "./styles";
+
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -38,22 +42,23 @@ function Users() {
   }
 
        function goBackPage(){
-       Navigate("/")
+       navigate("/")
 }
+
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
 
       <ContainerItens isBluer={true}>
-        <H1>Usuários</H1>
+        <Title>Usuários</Title>
 
         <ul>
           {users.map((user) => (
             <User key={user.id}>
               <p>{user.name}</p> <p>{user.age}</p>
-              <button onClick={() => deleteUser(user.id)}>
+              <Button onClick={() => deleteUser(user.id)}>
                 <img src={Trash} alt="lata-de-lixo" />
-              </button>
+              </Button>
             </User>
           ))}
         </ul>

@@ -1,14 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+  import {createRoot} from "react-dom";
 import GlobalStyle from "./globalStyle";
 import Routes from "./routs";
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
   <>
     
      
-    <Routes />
+    <Routes />  
     <GlobalStyle />
-  </>,
-  document.getElementById("root")
+  </>
+
 );

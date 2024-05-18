@@ -1,11 +1,13 @@
 import React, { useState, useRef,  } from "react";
 import { useNavigate } from  "react-router-dom";
-import Axios from "axios";
+import axios from "axios";
 import People from "../../assest/people.svg";
 import Arrow from "../../assest/arrow.svg";
-import H1 from "../../components/Titles";
+
+import Title from "../../components/Titles";
 import ContainerItens from "../../components/conteiners";
 import Button from "../../components/button";
+
 import {
   Container,
   Image,
@@ -13,17 +15,20 @@ import {
   InputLabel,
 
   
-} from "./styles";
-import axios from "axios";
+} 
+
+     from "./styles";
 
 
-function App() {
+
+  function App() {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate()
   const inputName = useRef()
   const inputAge = useRef()
+  
 
-}
+
   async function addNewUser() {
 
   const {data: newUser } = await axios.post("http://localhost:3001/users",
@@ -33,15 +38,16 @@ function App() {
   });
     setUsers([ ...users, newUser ]);
   
-    navigate("/usuarios");
+    navigate("./usuarios");
 }
 
-  retorn (
+  return (
+
     <Container>
       <Image alt="logo-imagem" src={People} />
 
       <ContainerItens>
-        <H1>Olá</H1>
+        <Title>Olá</Title>
 
         <InputLabel>Nome</InputLabel>
         <Input ref={inputName} placeholder="Nome" />
@@ -58,5 +64,5 @@ function App() {
     </Container>
   )
   
-  
+}
 export default App;

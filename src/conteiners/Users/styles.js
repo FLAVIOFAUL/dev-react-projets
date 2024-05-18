@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Background from "../../assest/backgraund2.svg";
 
+
 export const Container = styled.div`
   background: url("${Background}");
   background-size: cover;
@@ -16,3 +17,4 @@ export const Image = styled.img`
   margin-top: 30px;
 `;
 
+export const User="styled.li";
