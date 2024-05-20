@@ -38,7 +38,7 @@ import {
   });
     setUsers([ ...users, newUser ]);
   
-    navigate("./usuarios");
+    navigate("/usuarios");
 }
 
   return (
