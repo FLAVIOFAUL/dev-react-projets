@@ -5,7 +5,7 @@ import People from "../../assest/people.svg";
 import Arrow from "../../assest/arrow.svg";
 
 import Title from "../../components/Titles";
-import ContainerItens from "../../components/conteiners";
+import ContainerItens from "../../components/conteinerItens";
 import Button from "../../components/button";
 
 import {
@@ -55,7 +55,7 @@ import {
         <InputLabel>Idade</InputLabel>
         <Input ref={inputAge} placeholder="Idade" />
 
-        <Button  onClick={addNewUser}>
+        <Button onClick={addNewUser}>
           Cadastrar
           <img alt="seta" src={Arrow} />
         </Button>

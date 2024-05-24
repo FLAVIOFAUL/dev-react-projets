@@ -2,10 +2,10 @@ import React from "react";
 
 import { ContainerItens as Conteiner } from "./styles";
 
-function ContainerItens({children,isBluer}){
+function ContainerItens({children,isBlur}){
 
 
-    return <Conteiner isBluer={isBluer}>{children}</Conteiner>
+    return <Conteiner isBlur={isBlur}>{children}</Conteiner>
 }
 
 export default ContainerItens;

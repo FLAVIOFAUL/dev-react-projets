@@ -9,7 +9,7 @@ function MyRouter(){
     <Router>
         <Routes>
          <Route  path="/" element={<Home />}/>
-         <Route  path="/usuarios" elementent={<Users />} />
+         <Route  path="/usuarios" element={<Users />} />
          </Routes>
     </Router>
 

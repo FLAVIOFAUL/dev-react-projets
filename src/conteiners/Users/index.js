@@ -9,7 +9,7 @@ import Arrow from "../../assest/arrow.svg";
 import Trash from "../../assest/trash.svg";
 
 import  Title  from "../../components/Titles";
-import ContainerItens from "../../components/conteiners";
+import ContainerItens from "../../components/conteinerItens";
 import Button from "../../components/button";
 import {
   Container,
@@ -49,17 +49,18 @@ function Users() {
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
 
-      <ContainerItens isBluer={true}>
+      <ContainerItens isBlur={true}>
         <Title>Usuários</Title>
 
         <ul>
           {users.map((user) => (
             <User key={user.id}>
               <p>{user.name}</p> <p>{user.age}</p>
-              <Button onClick={() => deleteUser(user.id)}>
+              <button onClick={() => deleteUser(user.id)}>
                 <img src={Trash} alt="lata-de-lixo" />
-              </Button>
+              </button>
             </User>
+            
           ))}
         </ul>
 
