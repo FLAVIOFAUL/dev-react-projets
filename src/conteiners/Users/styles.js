@@ -41,7 +41,7 @@ font-style: normal;
 
 color: #ffffff;
 
-
+}
 
 button {
 
@@ -50,7 +50,7 @@ button {
   cursor: pointer;
 
 }
-}
+
 
  
 
