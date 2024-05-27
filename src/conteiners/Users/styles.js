@@ -1,17 +1,20 @@
+
 import styled from "styled-components";
 import Background from "../../assest/backgraund2.svg";
 
-
 export const Container = styled.div`
-  background: url("${Background}");
+  background: url("${Background}") no-repeat center center fixed;
   background-size: cover;
-  display: FLEX;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  height:100px;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
   min-height: 100vh;
+  box-sizing: border-box;
 `;
+
 
 export const Image = styled.img`
   margin-top: 30px;
